@@ -7,7 +7,12 @@ defmodule EliChartsWeb.PageController do
 
   def charts(conn, _params) do
     render conn, "charts.html",
-      simple_data: Poison.encode!([[175, 60], [190, 80], [180, 75]])
+      simple_data: Poison.encode!([[175, 60], [190, 80], [180, 75]]),
+      timeline_data: "[
+                      [\"Washington\", \"1789-04-29\", \"1797-03-03\"],
+                      [\"Adams\", \"1797-03-03\", \"1801-03-03\"],
+                      [\"Jefferson\", \"1801-03-03\", \"1809-03-03\"]
+                    ]"
   end
 
   def charts_crypto_compare(conn, _params) do

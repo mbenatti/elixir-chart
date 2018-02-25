@@ -17,6 +17,9 @@ defmodule EliChartsWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/charts", PageController, :charts
+    get "/charts-crypto", PageController, :charts_crypto_compare
+    get "/charts-coincap", PageController, :charts_coincap
   end
 
   # Other scopes may use custom stacks.

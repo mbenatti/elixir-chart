@@ -30,6 +30,12 @@
       </main>
 
     </div> <!-- /container -->
+
+    <!-- https://developers.google.com/chart/interactive/docs/quick_start -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <!-- chartkick.com (appended with app.js) -->
+
   </body>
 </html>

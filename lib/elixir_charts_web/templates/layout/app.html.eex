@@ -9,6 +9,11 @@
 
     <title>Hello EliCharts!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+
+    <!-- https://developers.google.com/chart/interactive/docs/quick_start -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Chartkick -->
+    <script type="text/javascript" src="https://unpkg.com/chartkick@2.3.2/dist/chartkick.js"></script>
   </head>
 
   <body>
@@ -31,11 +36,7 @@
 
     </div> <!-- /container -->
 
-    <!-- https://developers.google.com/chart/interactive/docs/quick_start -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
-    <!-- chartkick.com (appended with app.js) -->
 
   </body>
 </html>

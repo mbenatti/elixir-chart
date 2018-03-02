@@ -16,7 +16,10 @@ defmodule EliChartsWeb.PageController do
   end
 
   def charts_crypto_compare(conn, _params) do
-    render conn, "charts-crypto.html"
+    render conn, "charts-crypto.html",
+      day_data: ElixirCharts.CryptoCompare.get_day_hist(),
+      day_data120: ElixirCharts.CryptoCompare.get_day_hist120()
+
   end
 
   def charts_coincap(conn, _params) do

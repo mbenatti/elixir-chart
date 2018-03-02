@@ -1,1 +1,14 @@
-<p>WIP</p>
+<a href="<%= page_path(@conn, :index)%>">Index</a>
+
+<div class="row">
+  <h1>Chart's For BTC/BRL with 360 Days history</h1>
+  <div class="col-lg-12">
+    <h2>Line Chart</h2>
+    <%= raw Chartkick.line_chart @day_data %>
+  </div>
+  <h1>Chart's For BTC/BRL with 120 Days history</h1>
+  <div class="col-lg-12">
+    <h2>Line Chart</h2>
+    <%= raw Chartkick.line_chart @day_data120 %>
+  </div>
+</div>

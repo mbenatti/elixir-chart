@@ -23,6 +23,7 @@ defmodule EliChartsWeb.PageController do
   end
 
   def charts_coincap(conn, _params) do
-    render conn, "charts-coincap.html"
+    render conn, "charts-coincap.html",
+      day_data180: CoinCap.history_180day!("BTC")["price"]
   end
 end

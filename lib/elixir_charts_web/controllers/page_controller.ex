@@ -18,12 +18,15 @@ defmodule EliChartsWeb.PageController do
   def charts_crypto_compare(conn, _params) do
     render conn, "charts-crypto.html",
       day_data: ElixirCharts.CryptoCompare.get_day_hist(),
-      day_data120: ElixirCharts.CryptoCompare.get_day_hist120()
+      day_data_120: ElixirCharts.CryptoCompare.get_day_hist120()
 
   end
 
   def charts_coincap(conn, _params) do
     render conn, "charts-coincap.html",
-      day_data180: CoinCap.history_180day!("BTC")["price"]
+      day_data_180: CoinCap.history_180day!("BTC")["price"] |> Poison.encode!(),
+      day_data_90: CoinCap.history_90day!("BTC")["price"] |> Poison.encode!(),
+      day_data_30: CoinCap.history_30day!("BTC")["price"] |> Poison.encode!(),
+      day_data_7: CoinCap.history_7day!("BTC")["price"] |> Poison.encode!()
   end
 end

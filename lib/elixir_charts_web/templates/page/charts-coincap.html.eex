@@ -4,6 +4,24 @@
   <h1>Chart's For BTC/BRL with 180 Days history</h1>
   <div class="col-lg-12">
     <h2>Line Chart</h2>
-    <%= raw Chartkick.line_chart @day_data180 %>
+    <%= raw Chartkick.line_chart @day_data_180 %>
+  </div>
+
+  <h1>Chart's For BTC/BRL with 90 Days history</h1>
+  <div class="col-lg-12">
+    <h2>Line Chart</h2>
+    <%= raw Chartkick.line_chart @day_data_90 %>
+  </div>
+
+  <h1>Chart's For BTC/BRL with 30 Days history</h1>
+  <div class="col-lg-12">
+    <h2>Line Chart</h2>
+    <%= raw Chartkick.line_chart @day_data_30 %>
+  </div>
+
+  <h1>Chart's For BTC/BRL with 7 Days history</h1>
+  <div class="col-lg-12">
+    <h2>Line Chart</h2>
+    <%= raw Chartkick.line_chart @day_data_7 %>
   </div>
 </div>

@@ -27,6 +27,7 @@ defmodule EliChartsWeb.PageController do
       day_data_180: CoinCap.history_180day!("BTC")["price"] |> Poison.encode!(),
       day_data_90: CoinCap.history_90day!("BTC")["price"] |> Poison.encode!(),
       day_data_30: CoinCap.history_30day!("BTC")["price"] |> Poison.encode!(),
-      day_data_7: CoinCap.history_7day!("BTC")["price"] |> Poison.encode!()
+      day_data_7: CoinCap.history_7day!("BTC")["price"] |> Poison.encode!(),
+      day_data_1: CoinCap.history_1day!("BTC")["price"] |> Poison.encode!()
   end
 end
